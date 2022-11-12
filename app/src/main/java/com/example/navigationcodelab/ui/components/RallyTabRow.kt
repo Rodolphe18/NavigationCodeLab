@@ -45,14 +45,14 @@ import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.example.navigationcodelab.RallyDestination
+import com.example.navigationcodelab.RallyScreen
 import java.util.Locale
 
 @Composable
 fun RallyTabRow(
-    allScreens: List<RallyDestination>,
-    onTabSelected: (RallyDestination) -> Unit,
-    currentScreen: RallyDestination
+    allScreens: List<RallyScreen>,
+    onTabSelected: (RallyScreen) -> Unit,
+    currentScreen: RallyScreen
 ) {
     Surface(
         Modifier
@@ -62,7 +62,7 @@ fun RallyTabRow(
         Row(Modifier.selectableGroup()) {
             allScreens.forEach { screen ->
                 RallyTab(
-                    text = screen.route,
+                    text = screen.name,
                     icon = screen.icon,
                     onSelected = { onTabSelected(screen) },
                     selected = currentScreen == screen

@@ -33,7 +33,7 @@ import com.example.navigationcodelab.R
  * The Bills screen.
  */
 @Composable
-fun BillsScreen(
+fun BillsBody(
     bills: List<Bill> = remember { UserData.bills }
 ) {
     StatementBody(

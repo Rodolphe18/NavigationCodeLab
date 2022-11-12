@@ -28,12 +28,14 @@ import com.example.navigationcodelab.data.UserData
 import com.example.navigationcodelab.ui.components.AccountRow
 import com.example.navigationcodelab.ui.components.StatementBody
 import com.example.navigationcodelab.R
+import com.example.navigationcodelab.data.Account
 
 /**
  * The Accounts screen.
  */
 @Composable
-fun AccountsScreen(
+fun AccountsBody(
+    accounts: List<Account>,
     onAccountClick: (String) -> Unit = {},
 ) {
     val amountsTotal = remember { UserData.accounts.map { account -> account.balance }.sum() }
@@ -62,7 +64,8 @@ fun AccountsScreen(
  * Detail screen for a single account.
  */
 @Composable
-fun SingleAccountScreen(
+fun SingleAccountBody(
+    account: Account,
     accountType: String? = UserData.accounts.first().name
 ) {
     val account = remember(accountType) { UserData.getAccount(accountType) }

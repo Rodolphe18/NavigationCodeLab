@@ -50,17 +50,17 @@ import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
+import com.example.navigationcodelab.R
 import com.example.navigationcodelab.data.UserData
 import com.example.navigationcodelab.ui.components.AccountRow
 import com.example.navigationcodelab.ui.components.BillRow
 import com.example.navigationcodelab.ui.components.RallyAlertDialog
 import com.example.navigationcodelab.ui.components.RallyDivider
 import com.example.navigationcodelab.ui.components.formatAmount
-import com.example.navigationcodelab.R
 import java.util.Locale
 
 @Composable
-fun OverviewScreen(
+fun OverviewBody(
     onClickSeeAllAccounts: () -> Unit = {},
     onClickSeeAllBills: () -> Unit = {},
     onAccountClick: (String) -> Unit = {},
